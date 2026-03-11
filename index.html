@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIKEmaster - Your Personal Bike Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="bg-overlay"></div>
+        <div class="chat-wrapper">
+            <header class="chat-header">
+                <div class="bot-info">
+                    <div class="avatar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="18.5" cy="17.5" r="3.5"></circle>
+                            <circle cx="5.5" cy="17.5" r="3.5"></circle>
+                            <circle cx="15" cy="5" r="1"></circle>
+                            <path d="M12 17.5V14l-3-3 4-3 2 3h2"></path>
+                        </svg>
+                        <span class="status-dot"></span>
+                    </div>
+                    <div class="title-area">
+                        <h1>BIKEmaster</h1>
+                        <p class="status-text">Your speed-ready expert</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button id="resetChat" title="Clear History">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                    </button>
+                </div>
+            </header>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="msg-content">
+                        Hey there, rider! 🏍️ I'm BIKEmaster. Whether you're looking for specs, maintenance tips, or brands, I've got the info you need to stay on two wheels. What's on your mind?
+                    </div>
+                    <div class="msg-time">Just Now</div>
+                </div>
+            </div>
+
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            </div>
+
+            <footer class="chat-input-area">
+                <div class="input-container">
+                    <input type="text" id="userInput" placeholder="Ask about Kawasaki, maintenance, or engine types..." autocomplete="off">
+                    <button id="sendBtn" class="send-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
